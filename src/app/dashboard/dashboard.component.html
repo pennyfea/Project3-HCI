@@ -1,0 +1,10 @@
+<h2> Visualized Metrics By Domain </h2>
+<div class = "button-row">
+  <ul id = "thumbnailslist">
+    <li *ngFor="let dom of domain" (click)="onSelect(dom)">
+      <a routerLink="/domain/{{dom.id}}">
+        <button type="button" class="btn-outline-light">{{dom.catergory}}</button>
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,24 @@
+<h2>Individual libraries</h2>
+<div class = "row">
+  <div class = "button-row">
+    <button class = "btn btn-lg btn-info" [class.active]="filterby== 'all'" (click) ="filterby ='all'">All</button>
+    <button class = "btn btn-lg btn-info" [class.active]="filterby== 'testing'" (click) = "filterby = 'testing'">Testing</button>
+    <button class = "btn btn-lg btn-info" [class.active]="filterby== 'logging'" (click) = "filterby = 'logging'">Logging</button>
+    <button class = "btn btn-lg btn-info" [class.active]="filterby== 'utilities'" (click) = "filterby = 'utilities'">Utilities</button>
+    <button class = "btn btn-lg btn-info" [class.active]="filterby== 'mocking'" (click) = "filterby = 'mocking'">Mocking</button>
+    <button class = "btn btn-lg btn-info" [class.active]="filterby== 'cryptograpghy'" (click) = "filterby = 'cryptograpghy'">Cryptograpghy</button>
+    <button class = "btn btn-lg btn-info" [class.active]="filterby== 'json'" (click) = "filterby = 'json'">JSON</button>
+    <button class = "btn btn-lg btn-info" [class.active]="filterby== 'database'" (click) = "filterby = 'database'">Database</button>
+    <button class = "btn btn-lg btn-info" [class.active]="filterby== 'Security'" (click) = "filterby = 'Security'">Security</button>
+    <button class = "btn btn-lg btn-info" [class.active]="filterby== 'oom'" (click) = "filterby = 'oom'">Object-oriented mapping</button>
+    <button class = "btn btn-lg btn-info" [class.active]="filterby== 'xml'" (click) = "filterby = 'xml'">XML</button>
+  </div>
+
+  <ul id = "thumbnailslist">
+    <li *ngFor="let library of (libraries | libraryFilter:filterby)" (click)="onSelect(library)">
+      <a routerLink="/library/{{library.id}}">
+        <button type="button" class="btn-outline-light">{{library.name}}</button>
+      </a>
+    </li>
+  </ul>
+</div>
