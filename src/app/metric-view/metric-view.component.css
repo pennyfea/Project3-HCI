@@ -9,10 +9,14 @@
 }
 
 
-
+/*
 .tabs{
   margin: auto -230px;
   min-height: 660px;
   width: 2000px;
 
+} */
+
+.tabset{
+  margin: 90px 50px;
 }

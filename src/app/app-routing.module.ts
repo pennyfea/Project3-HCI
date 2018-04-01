@@ -11,13 +11,9 @@ const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'libraries', component: LibrariesComponent },
   { path: 'dashboard', component: DashboardComponent },
-
   { path: 'library/:id', component: MetricDetailsComponent },
   { path: 'domain/:id', component: MetricDetailsComponent },
-
   { path: 'image/:id', component: MetricViewComponent },
-
-
   { path: 'bookmarks', component: BookmarksComponent }
 
 ];

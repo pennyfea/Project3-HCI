@@ -1,0 +1,17 @@
+.tn{
+    padding: 6px;
+    border: 4px solid #eee;
+    box-shadow: #555 1px 1px 8px 1px;
+    height: 190px;
+    width: 240px;
+}
+
+ul {
+   padding: 0;
+   width: 1200px;
+   margin: 20px auto;
+ }
+
+li{
+   display: inline;
+}

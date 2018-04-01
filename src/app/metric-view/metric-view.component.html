@@ -2,14 +2,15 @@
   <h2>{{ image.catergory | uppercase }}</h2>
 <div>
 
-
 <div class = "row">
   <div [ngStyle] = "{'background-image': 'url('+ graph.url +')'}" class ="img-container">
 </div>
 
-
-
-
+<!--
 <div class = "row">
   <div style="background-image : url('../assets/img/tabs.png')" class ="tabs">
+</div> -->
+
+<div class = "tabset">
+  <ngbd-tabset-basic></ngbd-tabset-basic>
 </div>

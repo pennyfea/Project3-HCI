@@ -5,6 +5,8 @@ import { AlertModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 import { libraryFilterPipe } from './filter.pipe'
 import { ImageService } from './metric-details/shared/image.service'
@@ -20,6 +22,7 @@ import { DomainService } from './domain.service';
 import { LibraryService } from './library.service';
 import { GraphService } from './graph.service';
 import { MetricViewComponent } from './metric-view/metric-view.component';
+import { NgbdTabsetBasic } from './tabset-basic/tabset-basic';
 
 
 
@@ -33,6 +36,7 @@ import { MetricViewComponent } from './metric-view/metric-view.component';
     DashboardComponent,
     BookmarksComponent,
     MetricDetailsComponent,
+    NgbdTabsetBasic,
     MetricViewComponent,
 
 
@@ -41,6 +45,7 @@ import { MetricViewComponent } from './metric-view/metric-view.component';
     BrowserModule,
     FormsModule,
     AlertModule.forRoot(),
+    NgbModule.forRoot(),
     AppRoutingModule,
   ],
   providers: [libraryFilterPipe, ImageService, DomainService, LibraryService,GraphService],
