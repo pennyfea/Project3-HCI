@@ -22,7 +22,10 @@ import { DomainService } from './domain.service';
 import { LibraryService } from './library.service';
 import { GraphService } from './graph.service';
 import { MetricViewComponent } from './metric-view/metric-view.component';
+
+
 import { NgbdTabsetBasic } from './tabset-basic/tabset-basic';
+import { NgbdRatingTemplate } from './rating-template/rating-template';
 
 
 
@@ -37,6 +40,7 @@ import { NgbdTabsetBasic } from './tabset-basic/tabset-basic';
     BookmarksComponent,
     MetricDetailsComponent,
     NgbdTabsetBasic,
+    NgbdRatingTemplate,
     MetricViewComponent,
 
 
