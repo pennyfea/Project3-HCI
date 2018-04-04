@@ -3,18 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class GraphService {
 
-  // visibleImages = [];
-  // getImages(){
-  //   return this.visibleImages = IMAGES.slice(0);
-  // }
-
   constructor() { }
-
-  // getImage(id: number){
-  //   return IMAGES.slice(0).find(image => image.id == id)
-  // }
-
-
+  
   getGraph(id: number){
     return GRAPHS.slice(0).find(graph => graph.id == id)
   }
@@ -30,6 +20,4 @@ const GRAPHS = [
   {id: 7, catergory: "security", url: "assets/img/security.jpg" },
   {id: 8, catergory: "responsetime", url: "assets/img/responsetime.png" },
   {id: 9, catergory: "closingtime", url: "assets/img/isueclosing.png" }
-
-
 ];
