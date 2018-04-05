@@ -1,0 +1,37 @@
+ul {
+   padding: 0;
+   width: 1200px;
+   margin: 20px auto;
+ }
+
+li{
+   display: inline;
+}
+
+h2{
+  text-align: center;
+}
+
+.btn-info{
+  margin: 6px;
+}
+
+.button-row{
+  margin: auto;
+}
+
+button:focus {
+    background-color: red;
+}
+
+
+
+
+.btn-outline-light {
+    padding: 6px;
+    border: 4px solid #eee;
+    box-shadow: #555 1px 1px 8px 1px;
+    height: 160px;
+    width: 200px;
+    color: black;
+}

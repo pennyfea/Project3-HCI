@@ -26,20 +26,6 @@ activeId = 0;
     this.visibleImages = this.imageService.getImages();
    }
 
-  // ngOnInit() {
-  //   this.getLibrary();
-  //
-  //   this.image = this.imageService.getImage(
-  //    +this.route.snapshot.params['id'])
-  //
-  //   this.graph = this.graphService.getGraph(
-  //     +this.route.snapshot.params['id'])
-  //
-  //     this.route.paramMap.pipe(map((params) => params.get('id') || 0),map(n => Number(n))).subscribe(id => this.activeId = id);
-  //
-  // }
-
-
   ngOnInit() {
     const id$ = this.route.paramMap.pipe(map((params) => params.get('id') || 0), map(n => Number(n)));
     id$.subscribe(id => {
@@ -52,12 +38,6 @@ activeId = 0;
       .subscribe(library => this.library = library);
   }
 
-  //
-  // getLibrary(): void{
-  //   const id = +this.route.snapshot.paramMap.get('id');
-  //   this.libraryService.getLibrary(id)
-  //     .subscribe(library => this.library = library);
-  // }
 
   next() {
     // const next = this.activeId + 1 >= this.image.length - 1  ? this.graph.length - 1 : this.activeId + 1;

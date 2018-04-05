@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Domain } from '../library';
+import { DOMAIN } from '../domain-names';
+
 
 @Component({
   selector: 'app-compare',
@@ -8,20 +10,33 @@ import { FormControl } from '@angular/forms';
 })
 export class CompareComponent implements OnInit {
 
-  // domain: Domain;
-  // private domainService: DomainService, private location: Location, private route: ActivatedRoute
-  constructor( ) {
+
+  domain = DOMAIN;
+
+  selectedDomain: Domain;
+
+  onSelect(dom: Domain): void {
+    this.selectedDomain = dom;
   }
 
-
-  ngOnInit() {
-    // this.getDomain();
-  }
-
-  // getDomain(): void{
-  //   const id = +this.route.snapshot.paramMap.get('id');
-  //   this.domainService.getDomain(id)
-  //     .subscribe(domain => this.domain = domain);
+  // toggleDomain(domain: Domain) {
+  //   if(this.selectedDomains.includes(domain)) {
+  //       this.selectedDomains.splice(this.selectedDomains.indexOf(domain), 1);
+  //   } else {
+  //       this.selectedDomains.push(domain);
+  //   }
   // }
+  //
+  // isSelected(domain: Domain) {
+  //   return this.selectedDomains.includes(domain);
+  // }
+
+
+
+  constructor() {}
+
+
+  ngOnInit() {}
+
 
 }

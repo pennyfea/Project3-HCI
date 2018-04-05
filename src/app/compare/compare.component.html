@@ -1,6 +1,10 @@
-<!-- <form [formGroup]=”form” (submit)=”submit(form.value)”>
-  <div *ngFor=”let  dom of domains.controls; let i=index”>
-   <input type=”checkbox” [formControl]=”domain”/> {{domains.catergory}}
-  </div>
-  <button type=”submit”>Submit</button>
- </form> -->
+<h2> Visualized Metrics By Domain </h2>
+<div class = "button-row">
+  <ul id = "thumbnailslist">
+    <li *ngFor="let dom of domain" (click)="onSelect(dom)">
+      <a routerLink="/compare/{{dom.id}}">
+        <button type="button" class="btn-outline-light">{{dom.catergory}}</button>
+      </a>
+    </li>
+  </ul>
+</div>

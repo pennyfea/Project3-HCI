@@ -18,9 +18,9 @@ const routes: Routes = [
 
   { path: 'library/:id', component: MetricDetailsComponent },
   { path: 'domain/:id', component: MetricDetailsComponent },
+  { path: 'image/:id', component: MetricViewComponent},
+  { path: 'compare/:id', component: CompareComponent}
 
-
-  { path: 'image/:id', component: MetricViewComponent}
 ];
 
 @NgModule({
