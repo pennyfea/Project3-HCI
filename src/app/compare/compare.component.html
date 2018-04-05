@@ -7,7 +7,6 @@
       </a>
     </li> -->
     <li *ngFor="let dom of domain" (click)="onSelect(dom)">
-      <!-- <div [style.background-color]="isSelected(dom) ? 'red' : 'white'" (click)="toggleDomain(dom)"> {{dom.catergory}}</div> -->
       <button type ="button" class="btn-outline-light" [style.background-color]="isSelected(dom) ? 'red' : 'white'" (click)="toggleDomain(dom)">{{dom.catergory}}</button>
     </li>
   </ul>
