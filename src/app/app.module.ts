@@ -27,6 +27,7 @@ import { MetricViewComponent } from './metric-view/metric-view.component';
 import { NgbdTabsetBasic } from './tabset-basic/tabset-basic';
 import { NgbdRatingTemplate } from './rating-template/rating-template';
 import { CompareComponent } from './compare/compare.component';
+import { CompareViewComponent } from './compare-view/compare-view.component';
 
 
 
@@ -45,6 +46,7 @@ import { CompareComponent } from './compare/compare.component';
     NgbdRatingTemplate,
     MetricViewComponent,
     CompareComponent,
+    CompareViewComponent,
 
 
   ],

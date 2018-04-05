@@ -9,5 +9,7 @@
     <li *ngFor="let dom of domain" (click)="onSelect(dom)">
       <button type ="button" class="btn-outline-light" [style.background-color]="isSelected(dom) ? 'red' : 'white'" (click)="toggleDomain(dom)">{{dom.catergory}}</button>
     </li>
+    <button type="submit" (click)="sendDomain" class="btn btn-success">Submit</button>
+
   </ul>
 </div>

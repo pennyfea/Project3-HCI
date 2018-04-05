@@ -7,6 +7,7 @@ import { MetricDetailsComponent }  from './metric-details/metric-details.compone
 import { MetricViewComponent } from './metric-view/metric-view.component';
 import { NgbdTabsetBasic } from './tabset-basic/tabset-basic';
 import { CompareComponent } from './compare/compare.component';
+import { CompareViewComponent } from './compare-view/compare-view.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,7 @@ const routes: Routes = [
   { path: 'library/:id', component: MetricDetailsComponent },
   { path: 'domain/:id', component: MetricDetailsComponent },
   { path: 'image/:id', component: MetricViewComponent},
-  { path: 'compare/:id', component: CompareComponent}
+  { path: 'compare/:id', component: CompareViewComponent}
 
 ];
 

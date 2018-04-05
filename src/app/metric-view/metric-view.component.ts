@@ -14,7 +14,8 @@ import { map,mergeMap } from 'rxjs/operators';
 })
 export class MetricViewComponent implements OnInit {
 image: any
-graph: any
+testing: any;
+utilities: any;
 library: Library;
 visibleImages: any[] = [];
 
@@ -30,7 +31,8 @@ activeId = 0;
     const id$ = this.route.paramMap.pipe(map((params) => params.get('id') || 0), map(n => Number(n)));
     id$.subscribe(id => {
       this.activeId = id;
-      this.graph = this.graphService.getGraph(id);
+      this.testing =  this.graphService.getTestingGraphs(id);
+      this.utilities = this.graphService.getUtilitiesGraphs(id);
       this.image = this.imageService.getImage(id);
     });
 

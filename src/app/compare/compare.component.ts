@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Domain } from '../library';
 import { DOMAIN } from '../domain-names';
 
-
+// , EventEmitter,Output 
 @Component({
   selector: 'app-compare',
   templateUrl: './compare.component.html',
@@ -14,6 +14,13 @@ export class CompareComponent implements OnInit {
   domain = DOMAIN;
 
   selectedDomains: Domain[] = [];
+
+
+  // @Output() domainEvent =  new EventEmitter<selectedDomains>();
+  //
+  // sendDomain(){
+  //   this.domainEvent.emit(this.domainEvent)
+  // }
 
   // onSelect(dom: Domain): void {
   //   this.selectedDomain = dom;
@@ -29,10 +36,8 @@ export class CompareComponent implements OnInit {
 
   isSelected(domain: Domain) {
     return this.selectedDomains.includes(domain);
+
   }
-
-
-
   constructor() {}
 
 

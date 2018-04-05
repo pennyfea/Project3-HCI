@@ -6,10 +6,11 @@
 
 <div class ="row" >{{activeImage}}
     <button (click)="prev()" class="previous round">&#8249;</button>
-    <div [ngStyle] = "{'background-image': 'url('+ graph.url +')'}" class ="img-container">
+    <div  [ngStyle] = "{'background-image': 'url('+ utilities.url +')'}" class ="img-container">
     </div>
     <button (click)="next()" class="next round">&#8250;</button>
 </div>
+
 
 <div class = "tab-rating">
   <ngbd-rating-template></ngbd-rating-template>
