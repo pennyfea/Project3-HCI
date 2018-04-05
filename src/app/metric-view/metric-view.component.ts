@@ -51,6 +51,7 @@ activeId = 0;
     id$.pipe(mergeMap(id => this.libraryService.getLibrary(id)))
       .subscribe(library => this.library = library);
   }
+
   //
   // getLibrary(): void{
   //   const id = +this.route.snapshot.paramMap.get('id');
@@ -59,12 +60,13 @@ activeId = 0;
   // }
 
   next() {
-    const next = this.activeId + 1 >= this.image.length - 1 ? this.graph.length - 1 : this.activeId + 1;
+    // const next = this.activeId + 1 >= this.image.length - 1  ? this.graph.length - 1 : this.activeId + 1;
+    const next = this.activeId + 1 >= 9  ? 1 : this.activeId + 1;
     this.router.navigate(['/image/' + next]);
   }
 
   prev() {
-    const prev = this.activeId - 1 < 0 ? 0 : this.activeId - 1;
+    const prev = this.activeId - 1 < 1 ? 9 : this.activeId - 1;
     this.router.navigate(['/image/' + prev]);
   }
 
