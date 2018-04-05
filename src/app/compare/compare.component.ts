@@ -13,23 +13,23 @@ export class CompareComponent implements OnInit {
 
   domain = DOMAIN;
 
-  selectedDomain: Domain;
+  selectedDomains: Domain[] = [];
 
-  onSelect(dom: Domain): void {
-    this.selectedDomain = dom;
+  // onSelect(dom: Domain): void {
+  //   this.selectedDomain = dom;
+  // }
+
+  toggleDomain(domain: Domain) {
+    if(this.selectedDomains.includes(domain)) {
+        this.selectedDomains.splice(this.selectedDomains.indexOf(domain), 1);
+    } else {
+        this.selectedDomains.push(domain);
+    }
   }
 
-  // toggleDomain(domain: Domain) {
-  //   if(this.selectedDomains.includes(domain)) {
-  //       this.selectedDomains.splice(this.selectedDomains.indexOf(domain), 1);
-  //   } else {
-  //       this.selectedDomains.push(domain);
-  //   }
-  // }
-  //
-  // isSelected(domain: Domain) {
-  //   return this.selectedDomains.includes(domain);
-  // }
+  isSelected(domain: Domain) {
+    return this.selectedDomains.includes(domain);
+  }
 
 
 

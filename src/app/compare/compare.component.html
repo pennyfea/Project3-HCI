@@ -1,10 +1,14 @@
 <h2> Visualized Metrics By Domain </h2>
 <div class = "button-row">
   <ul id = "thumbnailslist">
-    <li *ngFor="let dom of domain" (click)="onSelect(dom)">
+    <!-- <li *ngFor="let dom of domain" (click)="onSelect(dom)">
       <a routerLink="/compare/{{dom.id}}">
         <button type="button" class="btn-outline-light">{{dom.catergory}}</button>
       </a>
+    </li> -->
+    <li *ngFor="let dom of domain" (click)="onSelect(dom)">
+      <!-- <div [style.background-color]="isSelected(dom) ? 'red' : 'white'" (click)="toggleDomain(dom)"> {{dom.catergory}}</div> -->
+      <button type ="button" class="btn-outline-light" [style.background-color]="isSelected(dom) ? 'red' : 'white'" (click)="toggleDomain(dom)">{{dom.catergory}}</button>
     </li>
   </ul>
 </div>
