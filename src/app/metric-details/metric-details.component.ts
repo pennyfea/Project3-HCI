@@ -14,23 +14,12 @@ import { map,mergeMap } from 'rxjs/operators';
   selector: 'app-metric-details',
   templateUrl: './metric-details.component.html',
   styleUrls: ['./metric-details.component.css']
-
-
 })
 export class MetricDetailsComponent implements OnInit {
 
-  domain: Domain;
-  library: Library;
-  image: any;
-  testing: any;
-  utilities: any;
-
-
   visibleImages: any[] = [];
   activeId = 0;
-  idnumber = 1;
-
-
+  domain: Domain[];
 
   constructor(private imageService: ImageService, private domainService: DomainService, private libraryService:LibraryService, private graphService:GraphService, private location: Location, private route: ActivatedRoute,  private router: Router) {
     this.visibleImages = this.imageService.getImages();
@@ -38,21 +27,13 @@ export class MetricDetailsComponent implements OnInit {
 }
 
   ngOnInit() {
-
-    this.getDomain();
-    this.getLibrary();
-}
-
-getDomain(): void{
-  const id = +this.route.snapshot.paramMap.get('id');
-  this.domainService.getDomain(id)
-    .subscribe(domain => this.domain = domain);
-}
-
-
-
-getLibrary(): void{
-  const id = +this.route.snapshot.paramMap.get('id');
-  this.libraryService.getLibrary(id)
-    .subscribe(library => this.library = library);
-}
+      this.route.params.subscribe(params => { {this.activeId = +params['id'];
+      console.log(this.activeId); //log the entire params object
+    // console.log(params['id']) //log the value of id
+    // const id = +this.route.snapshot.paramMap.get('id');
+    // console.log(id);
+      console.log(this.domainService.getDomain(this.activeId));
+      // this.domainService.getDomain(this.activeId).subscribe(domain =>this.domain = domain;console.log("Added",this.domain);});
+      this.domainService.getDomain(this.activeId).subscribe(domain => {this.domain = domain; console.log(this.domain);})
+    }
+  }

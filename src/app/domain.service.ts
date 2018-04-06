@@ -10,6 +10,6 @@ export class DomainService {
   constructor() { }
 
   getDomain(id: number): Observable<Domain>{
-    return of(DOMAIN.find(domain => domain.id === id));
+    return of(DOMAIN.find(domain => domain.id === id ));
   }
 }
