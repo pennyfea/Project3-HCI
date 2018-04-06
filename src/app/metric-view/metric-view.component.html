@@ -4,12 +4,39 @@
   <h2>{{ image.catergory | uppercase }}</h2>
 <div>
 
-<div class ="row" >{{activeImage}}
+<!-- <div *ngIf="domain.id != 1" class ="row" >
     <button (click)="prev()" class="previous round">&#8249;</button>
-    <div  [ngStyle] = "{'background-image': 'url('+ utilities.url +')'}" class ="img-container">
+    <div  [ngStyle] = "{'background-image': 'url('+ testing.url +')'}" class ="img-container">
+    </div>
+    <button (click)="next()" class="next round">&#8250;</button>
+</div> -->
+
+
+<div class ="row" >
+    <button (click)="prev()" class="previous round">&#8249;</button>
+    <div  [ngStyle] = "{'background-image': 'url('+ testing.url +')'}" class ="img-container">
     </div>
     <button (click)="next()" class="next round">&#8250;</button>
 </div>
+
+
+
+
+
+<!-- <div *ngIf = "getDomain() != 2" class ="row" >
+    <button (click)="prev()" class="previous round">&#8249;</button>
+    <div  [ngStyle] = "{'background-image': 'url('+ mocking.url +')'}" class ="img-container">
+    </div>
+    <button (click)="next()" class="next round">&#8250;</button>
+</div>
+
+<div *ngIf = "getDomain() != 3" class ="row" >
+    <button (click)="prev()" class="previous round">&#8249;</button>
+    <div  [ngStyle] = "{'background-image': 'url('+ xml.url +')'}" class ="img-container">
+    </div>
+    <button (click)="next()" class="next round">&#8250;</button> -->
+</div>
+
 
 
 <div class = "tab-rating">

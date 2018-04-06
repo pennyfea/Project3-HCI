@@ -18,7 +18,6 @@ export class GraphService {
   }
 
 }
-
 const TESTINGRAPHS = [
   {id: 1, catergory: "Popularity", url: "assets/img/pgraph.jpg" },
   {id: 2, catergory: "releasefrequency", url: "assets/img/rqgraph.jpg" },
@@ -29,10 +28,9 @@ const TESTINGRAPHS = [
   {id: 8, catergory: "responsetime", url: "assets/img/responsetime.png" },
   {id: 9, catergory: "closingtime", url: "assets/img/isueclosing.png" }
 ];
-
-
 const UTILITIESGRAPHS = [
   {id: 1, catergory: "last discuss overflow", url: "assets/img/ldof.png" },
   {id: 2, catergory: "performance", url: "assets/img/performance.jpg" },
   {id: 3, catergory: "security", url: "assets/img/security.jpg" }
+
 ];
