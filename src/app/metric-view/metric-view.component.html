@@ -2,7 +2,7 @@
   <h2>{{ image.catergory | uppercase }}</h2>
 <div>
 
-  <div *ngIf = "domain.id === 1" class ="row" >
+  <div  class ="row" >
     <button (click)="prev()" class="previous round">&#8249;</button>
       <div  [ngStyle] = "{'background-image': 'url('+ testing.url +')'}" class ="img-container">
       </div>
@@ -10,25 +10,38 @@
   </div>
 
 
-  <!-- <div class ="row" >
-      <button (click)="prev()" class="previous round">&#8249;</button>
-      <div  [ngStyle] = "{'background-image': 'url('+ testing.url +')'}" class ="img-container">
+  <!-- <div *ngIf = "domain.id == 2" class ="row" >
+    <button (click)="prev()" class="previous round">&#8249;</button>
+      <div  [ngStyle] = "{'background-image': 'url('+ utilities.url +')'}" class ="img-container">
       </div>
-      <button (click)="next()" class="next round">&#8250;</button>
+    <button (click)="next()" class="next round">&#8250;</button>
   </div>
 
-</div> -->
+
+  <div *ngIf = "domain.id == 3" class ="row" >
+    <button (click)="prev()" class="previous round">&#8249;</button>
+      <div  [ngStyle] = "{'background-image': 'url('+ testing.url +')'}" class ="img-container">
+      </div>
+    <button (click)="next()" class="next round">&#8250;</button>
+  </div>
+
+
+  <div *ngIf = "domain.id == 4" class ="row" >
+    <button (click)="prev()" class="previous round">&#8249;</button>
+      <div  [ngStyle] = "{'background-image': 'url('+ testing.url +')'}" class ="img-container">
+      </div>
+    <button (click)="next()" class="next round">&#8250;</button>
+  </div>
+
+
+  <div *ngIf = "domain.id == 5" class ="row" >
+    <button (click)="prev()" class="previous round">&#8249;</button>
+      <div  [ngStyle] = "{'background-image': 'url('+ testing.url +')'}" class ="img-container">
+      </div>
+    <button (click)="next()" class="next round">&#8250;</button>
+  </div> -->
 
 <div class = "tab-rating">
   <ngbd-rating-template></ngbd-rating-template>
   <ngbd-tabset-basic></ngbd-tabset-basic>
 </div>
-
-
-
-<!-- <div *ngIf="domain.id != 1" class ="row" >
-    <button (click)="prev()" class="previous round">&#8249;</button>
-    <div  [ngStyle] = "{'background-image': 'url('+ testing.url +')'}" class ="img-container">
-    </div>
-    <button (click)="next()" class="next round">&#8250;</button>
-</div> -->

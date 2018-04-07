@@ -2,14 +2,18 @@ ul {
    padding: 0;
    width: 1200px;
    margin: 20px auto;
+
  }
 
 li{
    display: inline;
+   background-color: white;
 }
 
 h2{
   text-align: center;
+  background-color: white;
+
 }
 
 .btn-info{
@@ -17,7 +21,7 @@ h2{
 }
 
 .button-row{
-  margin: auto;;
+  margin: auto;
 }
 
 .btn-outline-light {

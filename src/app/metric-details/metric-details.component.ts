@@ -19,8 +19,7 @@ export class MetricDetailsComponent implements OnInit {
 
   visibleImages: any[] = [];
   activeId = 0;
-  domain: Domain[];
-
+  domain: Domain[] = [];
   constructor(private imageService: ImageService, private domainService: DomainService, private libraryService:LibraryService, private graphService:GraphService, private location: Location, private route: ActivatedRoute,  private router: Router) {
     this.visibleImages = this.imageService.getImages();
 
@@ -37,3 +36,4 @@ export class MetricDetailsComponent implements OnInit {
       this.domainService.getDomain(this.activeId).subscribe(domain => {this.domain = domain; console.log(this.domain);})
     }
   }
+}
