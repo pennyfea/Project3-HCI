@@ -34,7 +34,7 @@ activeId = 0;
    }
 
   ngOnInit() {
-    
+
         const id$ = this.route.paramMap.pipe(map((params) => params.get('id') || 0), map(n => Number(n)));
         id$.subscribe(id => {
           this.activeId = id;
@@ -47,7 +47,7 @@ activeId = 0;
           const id = +params['id'];
           console.log(`Current param ID is: ${id}`);
     });
-    //
+
 
     //     const id$ = this.route.paramMap.pipe(map((params) => params.get('id') || 0), map(n => Number(n)));
     //     id$.subscribe(id => {
