@@ -6,7 +6,7 @@
     <ul id = "thumbnailslist">
       <li *ngFor="let image  of visibleImages ">
         <!-- , domain] -->
-        <a [routerLink] = "['/image', image.id]">
+        <a [routerLink] = "['/image', image.id, domain]">
           <img src = "{{image.url}}" class = "tn">
         </a>
       </li>

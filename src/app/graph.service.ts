@@ -45,7 +45,7 @@ const ALLGRAPHS = [
   {id: 6,  url: "assets/img/xmlperform.png" },
   {id: 7,  url: "assets/img/xmlsecure.png" },
   {id: 8, url: "assets/img/xmlresponserate.JPG" },
-  {id: 9,  url: "assets/img/xmlcloserate.JPG" }
+  {id: 9,  url: "assets/img/xmlclose.png" }
 
 
 

@@ -35,18 +35,21 @@ activeId = 0;
 
   ngOnInit() {
 
-        const id$ = this.route.paramMap.pipe(map((params) => params.get('id') || 0), map(n => Number(n)));
-        id$.subscribe(id => {
-          this.activeId = id;
-          this.testing =  this.graphService.getAllGraphs(id);
-          this.image = this.imageService.getImage(id);
-        });
+        const imageId = this.route.snapshot.params['id'];
+        console.log("ImageId: ", imageId);
 
-          this.route.params
-          .subscribe(params => {
-          const id = +params['id'];
-          console.log(`Current param ID is: ${id}`);
-    });
+    //     const id$ = this.route.paramMap.pipe(map((params) => params.get('id') || 0), map(n => Number(n)));
+    //     id$.subscribe(id => {
+    //       this.activeId = id;
+    //       this.testing =  this.graphService.getAllGraphs(id);
+    //       this.image = this.imageService.getImage(id);
+    //     });
+    //
+    //       this.route.params
+    //       .subscribe(params => {
+    //       const id = +params['id'];
+    //       console.log(`Current param ID is: ${id}`);
+    // });
 
 
     //     const id$ = this.route.paramMap.pipe(map((params) => params.get('id') || 0), map(n => Number(n)));
@@ -62,28 +65,28 @@ activeId = 0;
     //       console.log(`Current param ID is: ${id}`);
     // });
 
-    // this.route.params.subscribe(response => {
-    //    let path = window.location.pathname.split('/');
-    //    let path1 = window.location.pathname.split(';')
-    //    var id = path[0]
-    //    console.log("Path",path)
-    //    console.log("Path",path1)
-    //    console.log("id", id)
-    //
-    // });
+    this.route.params.subscribe(response => {
+       let path = window.location.pathname.split('/');
+       let path1 = window.location.pathname.split(';')
+       var id = path[0]
+       console.log("Path",path)
+       console.log("Path",path1)
+       console.log("id", id)
+
+    });
 
 }
 
-  next() {
-    // const next = this.activeId + 1 >= this.image.length - 1  ? this.graph.length - 1 : this.activeId + 1;
-  const next = this.activeId + 1 >= 9  ? 1 : this.activeId + 1;
-  this.router.navigate(['/image/' + next]);
-  }
-
-  prev() {
-    const prev = this.activeId - 1 < 1 ? 9 : this.activeId - 1;
-    this.router.navigate(['/image/' + prev]);
-  }
+  // next() {
+  //   // const next = this.activeId + 1 >= this.image.length - 1  ? this.graph.length - 1 : this.activeId + 1;
+  // const next = this.activeId + 1 >= 9  ? 1 : this.activeId + 1;
+  // this.router.navigate(['/image/' + next]);
+  // }
+  //
+  // prev() {
+  //   const prev = this.activeId - 1 < 1 ? 9 : this.activeId - 1;
+  //   this.router.navigate(['/image/' + prev]);
+  // }
 
 
 
