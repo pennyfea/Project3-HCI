@@ -1,14 +1,17 @@
 <div>
   <h2>Visualized Software Metrics</h2>
-  <h2 *ngIf="domain?.catergory">Library Type: {{ domain.catergory | uppercase }}</h2>
+  <h2 *ngIf="domain?.category">Library Type: {{ domain.category | uppercase }}</h2>
   <h2 *ngIf="library?.name">Library: {{ library.name | uppercase }}</h2>
   <div class = "row">
     <ul id = "thumbnailslist">
+
       <li *ngFor="let image  of visibleImages ">
-        <!-- , domain] -->
-        <a [routerLink] = "['/image', image.id]">
+        <a [routerLink] = "['/image', image.id, domain]">
           <img src = "{{image.url}}" class = "tn">
         </a>
+
+
+
       </li>
     </ul>
   </div>

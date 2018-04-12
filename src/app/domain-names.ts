@@ -1,13 +1,13 @@
 import { Domain } from './library';
 
 export const DOMAIN: Domain[] = [
-  {id: 1, catergory: "testing" },
-  {id: 2, catergory: "utilities" },
-  {id: 3, catergory: "mocking" },
-  {id: 4, catergory: "cryptography" },
-  {id: 5, catergory: "json" },
-  {id: 6, catergory: "database" },
-  {id: 7, catergory: "security" },
-  {id: 8, catergory: "object-relational mapping" },
-  {id: 9, catergory: "xml" }
+  {id: 1, category: "testing" },
+  {id: 2, category: "utilities" },
+  {id: 3, category: "mocking" },
+  {id: 4, category: "cryptography" },
+  {id: 5, category: "json" },
+  {id: 6, category: "database" },
+  {id: 7, category: "security" },
+  {id: 8, category: "object-relational mapping" },
+  {id: 9, category: "xml" }
 ];

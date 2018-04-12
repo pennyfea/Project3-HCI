@@ -1,16 +1,16 @@
 export class Library{
   id: number;
-  catergory: string;
+  category: string;
   name: string;
 }
 
 export class Domain{
   id: number;
-  catergory: string;
+  category: string;
 }
 
 
 export class Metric{
   id:number;
-  catergory:string;
+  category:string;
 }

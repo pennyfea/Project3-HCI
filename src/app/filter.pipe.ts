@@ -6,7 +6,7 @@ export class libraryFilterPipe implements PipeTransform{
     if(criteria == 'all') {return items}
      else
     return items.filter(item => {
-      return item.catergory ===  criteria;
+      return item.category ===  criteria;
     });
   }
 }

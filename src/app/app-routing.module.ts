@@ -16,14 +16,11 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'compare', component: CompareComponent },
   { path: 'bookmarks', component: BookmarksComponent },
-  //
   { path: 'library/:id', component: MetricDetailsComponent },
   { path: 'domain/:id', component: MetricDetailsComponent },
-  { path: 'image/:id', component: MetricViewComponent},
+  // { path: 'image/:imageId', component: MetricViewComponent},
+    { path: 'image/:id', component: MetricViewComponent},
   { path: 'compare/:id', component: CompareViewComponent}
-
-
-
   // { path: 'domain/:id', component: MetricViewComponent},
 
 

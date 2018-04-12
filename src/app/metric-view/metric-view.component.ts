@@ -19,88 +19,53 @@ image: any;
 utilities:any;
 testing: any;
 visibleImages: any[] = [];
-activeId = 0;
-
-
-@Input() domains: Domains[];
-
+@Input() domain: Domain;
+activeId: 0;
 
   constructor(private imageService: ImageService, private libraryService:LibraryService, private domainService: DomainService, private graphService:GraphService, private location: Location, private route: ActivatedRoute, private router: Router) {
 
-  this.route.params.subscribe((domain: Domain) => {
-         this.domain = domain;});
-  console.log("Hello this catergory",this.domain);
+    this.route.params.subscribe((domain: Domain) => {this.domain = domain;});
+    console.log("Hello this category",this.domain.category);
+
     this.visibleImages = this.imageService.getImages();
+    console.log("visibleImages", this.visibleImages);
    }
 
-  ngOnInit() {
-        //
-        // const imageId = this.route.snapshot.params['id'];
-        // console.log("ImageId: ", imageId);
+//   ngOnInit() {
+//
+//         this.route.paramMap.subscribe(response => {
+//           let path = window.location.pathname.split(";")[0].split("/").pop();
+//           this.testing =  this.graphService.getTestingGraphs(parseInt(path));
+//           this.utilities =  this.graphService.getUtilitiesGraphs(parseInt(path));
+//           this.image = this.imageService.getImage(parseInt(path));
+//         });
+//
+// }
 
-        const id$ = this.route.paramMap.pipe(map((params) => params.get('id') || 0), map(n => Number(n)));
-        id$.subscribe(id => {
-          this.activeId = id;
-          this.testing =  this.graphService.getAllGraphs(id);
-          this.image = this.imageService.getImage(id);
-        });
+    ngOnInit() {
 
-          this.route.params
-          .subscribe(params => {
-          const id = +params['id'];
-          console.log(`Current param ID is: ${id}`);
-    });
+          this.route.params.subscribe(response => {
+            let path = window.location.pathname.split(";")[0].split("/").pop();
+            this.activeId = parseInt(path);
+            console.log("ActiveId",this.activeId);
+            this.testing =  this.graphService.getTestingGraphs(parseInt(path));
+            this.utilities =  this.graphService.getUtilitiesGraphs(parseInt(path));
+            this.image = this.imageService.getImage(parseInt(path));
+          });
+
+    }
 
 
-    //     const id$ = this.route.paramMap.pipe(map((params) => params.get('id') || 0), map(n => Number(n)));
-    //     id$.subscribe(id => {
-    //       this.activeId = id;
-    //       console.log("ActiveId",this.activeId);
-    //       this.testing =  this.graphService.getTestingGraphs(id);
-    //       this.image = this.imageService.getImage(id);
-    //     });
-    //       this.route.params
-    //       .subscribe(params => {
-    //       const id = +params['id'];
-    //       console.log(`Current param ID is: ${id}`);
-    // });
-    //
-    // this.route.params.subscribe(response => {
-    //    let path = window.location.pathname.split('/');
-    //    let path1 = window.location.pathname.split(';')
-    //    var id = path[0]
-    //    console.log("Path",path)
-    //    console.log("Path",path1)
-    //    console.log("id", id)
-    //
-    // });
+    next() {
+      console.log("Before", this.activeId);
+      const next = parseInt(this.activeId) + 1 >= 9 ? 1: parseInt(this.activeId) + 1;
+      console.log("After", next);
+      this.router.navigateByUrl('/image/' + `${next};id=${this.domain.id};category=${this.domain.category}`);
+    }
 
 }
 
-  next() {
-    // const next = this.activeId + 1 >= this.image.length - 1  ? this.graph.length - 1 : this.activeId + 1;
-  const next = this.activeId + 1 >= 9  ? 1 : this.activeId + 1;
-  this.router.navigate(['/image/' + next]);
-  }
-
-  prev() {
-    const prev = this.activeId - 1 < 1 ? 9 : this.activeId - 1;
-    this.router.navigate(['/image/' + prev]);
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+  // prev() {
+  //   const prev = this.activeId - 1 < 1 ? 9 : this.activeId - 1;
+  //   this.router.navigate(['/image/' + prev]);
+  // }
